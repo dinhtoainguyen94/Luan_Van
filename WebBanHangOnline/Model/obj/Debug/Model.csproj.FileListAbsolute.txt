@@ -1,0 +1,14 @@
+D:\Luan_Van\WebBanHangOnline\Model\bin\Debug\Model.dll.config
+D:\Luan_Van\WebBanHangOnline\Model\bin\Debug\Model.dll
+D:\Luan_Van\WebBanHangOnline\Model\bin\Debug\Model.pdb
+D:\Luan_Van\WebBanHangOnline\Model\bin\Debug\EntityFramework.dll
+D:\Luan_Van\WebBanHangOnline\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Luan_Van\WebBanHangOnline\Model\bin\Debug\PagedList.dll
+D:\Luan_Van\WebBanHangOnline\Model\bin\Debug\PagedList.Mvc.dll
+D:\Luan_Van\WebBanHangOnline\Model\bin\Debug\EntityFramework.xml
+D:\Luan_Van\WebBanHangOnline\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Luan_Van\WebBanHangOnline\Model\bin\Debug\PagedList.xml
+D:\Luan_Van\WebBanHangOnline\Model\bin\Debug\PagedList.Mvc.xml
+D:\Luan_Van\WebBanHangOnline\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\Luan_Van\WebBanHangOnline\Model\obj\Debug\Model.dll
+D:\Luan_Van\WebBanHangOnline\Model\obj\Debug\Model.pdb

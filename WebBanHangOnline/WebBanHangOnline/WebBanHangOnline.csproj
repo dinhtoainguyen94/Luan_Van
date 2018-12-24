@@ -1402,6 +1402,7 @@
     <Content Include="assets\client\css\global.css" />
     <Content Include="assets\client\css\slider.css" />
     <Content Include="assets\client\font\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\client\js\controller\CartController.js" />
     <Content Include="assets\client\js\jquery-1.11.3.min.js" />
     <Content Include="fonts\style.css" />
     <Content Include="assets\client\images\about_img.jpg" />
@@ -1609,6 +1610,7 @@
     <Content Include="Views\Product\Category.cshtml" />
     <Content Include="Views\Product\Detail.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Shared\HeaderCart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

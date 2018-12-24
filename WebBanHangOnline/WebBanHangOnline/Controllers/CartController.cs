@@ -4,18 +4,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebBanHangOnline.Common;
 using WebBanHangOnline.Models;
+using System.Web.Script.Serialization;
 
 namespace WebBanHangOnline.Controllers
 {
     public class CartController : Controller
     {
-        private const string CartSession = "CartSession";
+        
         //
         // GET: /Cart/
         public ActionResult Index()
         {
-            var cart = Session[CartSession];
+            var cart = Session[CommonConstants.CartSession];
             var list = new List<CartItem>();
             if (cart != null)
             {
@@ -24,10 +26,46 @@ namespace WebBanHangOnline.Controllers
             return View(list);
         }
 
+        public JsonResult Delete(long id)
+        {
+            var sessionCart = (List<CartItem>)Session[CommonConstants.CartSession];
+            sessionCart.RemoveAll(x => x.Product.ID_SP == id);
+            Session[CommonConstants.CartSession] = sessionCart;
+            return Json(new
+            {
+                status = true
+            });
+        }
+        public JsonResult DeleteAll()
+        {
+            Session[CommonConstants.CartSession] = null;
+            return Json(new
+            {
+                status = true
+            });
+        }
+        public JsonResult Update(string cartModel)
+        {
+            var jsonCart = new JavaScriptSerializer().Deserialize<List<CartItem>>(cartModel);
+            var sessionCart = (List<CartItem>)Session[CommonConstants.CartSession];
+            foreach (var item in sessionCart)
+            {
+                var jsonItem = jsonCart.SingleOrDefault(x=>x.Product.ID_SP == item.Product.ID_SP);
+                if (jsonItem != null)
+                {
+                    item.Quantity = jsonItem.Quantity;
+                }
+            }
+            Session[CommonConstants.CartSession] = sessionCart;
+            return Json(new{
+                status = true
+            });
+        }
+
         public ActionResult AddItem(long productId, int quantity)
         {
             var product = new ProductClientDao().ViewDetail(productId);
-            var cart = Session[CartSession];
+            var cart = Session[CommonConstants.CartSession];
             if (cart != null)
             {
                 var list = (List<CartItem>)cart;
@@ -49,7 +87,7 @@ namespace WebBanHangOnline.Controllers
                     list.Add(item);
                 }
                 // gán vào session
-                Session[CartSession] = list;
+                Session[CommonConstants.CartSession] = list;
             }
             else
             {
@@ -61,7 +99,7 @@ namespace WebBanHangOnline.Controllers
                 list.Add(item);
 
                 // gán vào session
-                Session[CartSession] = list;
+                Session[CommonConstants.CartSession] = list;
 
             }
             return RedirectToAction("Index");

@@ -117,6 +117,5 @@ D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\Microsoft.Owin.Security
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\Microsoft.Owin.Security.Google.xml
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\Microsoft.Owin.Security.Twitter.xml
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\obj\Debug\WebBanHangOnline.csprojResolveAssemblyReference.cache
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\obj\Debug\WebBanHangOnline.dll
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\obj\Debug\WebBanHangOnline.pdb

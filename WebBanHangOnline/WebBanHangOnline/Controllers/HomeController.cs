@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Model.Dao;
+using WebBanHangOnline.Models;
+using WebBanHangOnline.Common;
 
 namespace WebBanHangOnline.Controllers
 {
@@ -38,6 +40,18 @@ namespace WebBanHangOnline.Controllers
         {
             var model = new FooterDao().GetFooter();
             return PartialView(model);
+        }
+
+        [ChildActionOnly]
+        public PartialViewResult HeaderCart()
+        {
+            var cart = Session[CommonConstants.CartSession];
+            var list = new List<CartItem>();
+            if (cart != null)
+            {
+                list = (List<CartItem>)cart;
+            }
+            return PartialView(list);
         }
 	}
 }

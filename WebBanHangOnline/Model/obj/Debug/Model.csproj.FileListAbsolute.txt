@@ -23,6 +23,6 @@ D:\GitHub\Luan_Van\WebBanHangOnline\Model\bin\Debug\EntityFramework.xml
 D:\GitHub\Luan_Van\WebBanHangOnline\Model\bin\Debug\EntityFramework.SqlServer.xml
 D:\GitHub\Luan_Van\WebBanHangOnline\Model\bin\Debug\PagedList.xml
 D:\GitHub\Luan_Van\WebBanHangOnline\Model\bin\Debug\PagedList.Mvc.xml
-D:\GitHub\Luan_Van\WebBanHangOnline\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 D:\GitHub\Luan_Van\WebBanHangOnline\Model\obj\Debug\Model.dll
 D:\GitHub\Luan_Van\WebBanHangOnline\Model\obj\Debug\Model.pdb
+D:\GitHub\Luan_Van\WebBanHangOnline\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

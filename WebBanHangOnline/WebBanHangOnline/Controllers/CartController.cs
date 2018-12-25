@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using WebBanHangOnline.Common;
 using WebBanHangOnline.Models;
 using System.Web.Script.Serialization;
+using Model.EF;
 
 namespace WebBanHangOnline.Controllers
 {
@@ -103,6 +104,59 @@ namespace WebBanHangOnline.Controllers
 
             }
             return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult Payment()
+        {
+
+            var cart = Session[CommonConstants.CartSession];
+            var list = new List<CartItem>();
+            if (cart != null)
+            {
+                list = (List<CartItem>)cart;
+            }
+            return View(list);
+        }
+
+        [HttpPost]
+        public ActionResult Payment(string shipName, string mobile, string address, string email)
+        {
+            var oder = new DonDatHang();
+            oder.CreateDate = DateTime.Now;
+            oder.ShipName = shipName;
+            oder.ShipMobie = mobile;
+            oder.ShipAddress = address;
+            oder.ShipEmail = email;
+
+            try
+            {
+                var id = new OderDao().Insert(oder);
+                var cart = (List<CartItem>)Session[CommonConstants.CartSession];
+                var detailDao = new OderDetailDao();
+                foreach (var item in cart)
+                {
+                    var oderDetail = new ChiTietDDH();
+                    oderDetail.ID_SP = item.Product.ID_SP;
+                    oderDetail.ID_DDH = id;
+                    oderDetail.Price = item.Product.Price;
+                    oderDetail.Quantity = item.Quantity;
+                    detailDao.Insert(oderDetail);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                //ghi log
+                return Redirect("/loi-thanh-toan");
+            }
+            
+            return Redirect("/hoan-thanh");
+        }
+
+        public ActionResult Success()
+        {
+            return View();
         }
 	}
 }

@@ -62,6 +62,8 @@
     <Compile Include="Content\ConvertString.cs" />
     <Compile Include="Dao\FooterDao.cs" />
     <Compile Include="Dao\MenuDao.cs" />
+    <Compile Include="Dao\OderDao.cs" />
+    <Compile Include="Dao\OderDetailDao.cs" />
     <Compile Include="Dao\ProductCategoryDao.cs" />
     <Compile Include="Dao\ProductClientDao.cs" />
     <Compile Include="Dao\ProductDao.cs" />

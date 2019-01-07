@@ -36,7 +36,7 @@ namespace Model.EF
 
         public int? Quantity { get; set; }
 
-        public long? ID_DMSP { get; set; }
+        public long ID_DMSP { get; set; }
 
         [Column(TypeName = "ntext")]
         public string Detail { get; set; }

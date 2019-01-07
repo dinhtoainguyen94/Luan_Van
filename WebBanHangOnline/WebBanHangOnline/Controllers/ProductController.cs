@@ -22,6 +22,7 @@ namespace WebBanHangOnline.Controllers
             return PartialView(model);
         }
 
+
         public ActionResult Slide()
         {
             var model = new SlideDao().GetSlide();
@@ -48,12 +49,20 @@ namespace WebBanHangOnline.Controllers
 
             return View(model);
         }
+
+        public ActionResult SeeAllProduct(int page = 1, int pageSize = 4)
+        {
+            var dao = new ProductClientDao();
+            var model = dao.SeeAll( page, pageSize);
+            return View(model);
+        }
         public ActionResult Detail(long id)
         {
             var productDetail = new ProductClientDao().ViewDetail(id);
-            ViewBag.Category = new ProductCategoryDao().ViewDetail(productDetail.ID_DMSP.Value);
+            ViewBag.Category = new ProductCategoryDao().ViewDetail(productDetail.ID_DMSP);
             ViewBag.RelatedProduct = new ProductClientDao().ListRelatedProducts(id);
             return View(productDetail);
         }
+
 	}
 }

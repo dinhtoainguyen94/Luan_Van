@@ -13,6 +13,9 @@ namespace WebBanHangOnline
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.IgnoreRoute("{*botdetect}",
+            new { botdetect = @"(.*)BotDetectCaptcha\.ashx" });
+
             routes.MapRoute(
                 name: "Product Category",
                 url: "san-pham/{metatitle}-{cateID}",
@@ -28,6 +31,13 @@ namespace WebBanHangOnline
            );
 
             routes.MapRoute(
+               name: "See All Product",
+               url: "san-pham",
+               defaults: new { controller = "Product", action = "SeeAllProduct", id = UrlParameter.Optional },
+               namespaces: new[] { "WebBanHangOnline.Controllers" }
+           );
+
+            routes.MapRoute(
                name: "Add Cart",
                url: "them-gio-hang",
                defaults: new { controller = "Cart", action = "AddItem", id = UrlParameter.Optional },
@@ -38,6 +48,20 @@ namespace WebBanHangOnline
               name: "Cart",
               url: "gio-hang",
               defaults: new { controller = "Cart", action = "Index", id = UrlParameter.Optional },
+              namespaces: new[] { "WebBanHangOnline.Controllers" }
+          );
+
+            routes.MapRoute(
+              name: "Login",
+              url: "dang-nhap",
+              defaults: new { controller = "User", action = "login", id = UrlParameter.Optional },
+              namespaces: new[] { "WebBanHangOnline.Controllers" }
+          );
+
+            routes.MapRoute(
+              name: "Register",
+              url: "dang-ky",
+              defaults: new { controller = "User", action = "Register", id = UrlParameter.Optional },
               namespaces: new[] { "WebBanHangOnline.Controllers" }
           );
 

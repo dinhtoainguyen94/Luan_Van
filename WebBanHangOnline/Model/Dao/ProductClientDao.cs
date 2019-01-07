@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PagedList;
 
 namespace Model.Dao
 {
@@ -38,6 +39,12 @@ namespace Model.Dao
         {
             var product = db.SanPhams.Find(productId);
             return db.SanPhams.Where(x => x.ID_SP != productId && x.ID_DMSP == product.ID_DMSP).ToList();
+        }
+
+        public IEnumerable<SanPham> SeeAll(int page, int pageSize)
+        {
+            IQueryable<SanPham> model = db.SanPhams;
+            return model.OrderByDescending(x => x.CreateDate).ToPagedList(page, pageSize);
         }
         public SanPham ViewDetail(long id)
         {

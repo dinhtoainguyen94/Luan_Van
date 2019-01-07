@@ -29,7 +29,7 @@
                         <p><span class="rupees">@(item.Price.HasValue ? item.Price.Value.ToString("N0") : "Liên Hệ")</span></p>
                     </div>
                     <div class="add-cart">
-                        <h4><a href="/gio-hang/@item.ID_SP">Thêm Vào Giỏ</a></h4>
+                        <h4><a href="them-gio-hang?productId=@item.ID_SP&quantity=1">Thêm Vào Giỏ</a></h4>
                     </div>
                     <div class="clear"></div>
                 </div>

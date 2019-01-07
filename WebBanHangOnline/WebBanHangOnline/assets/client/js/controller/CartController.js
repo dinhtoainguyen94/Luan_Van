@@ -10,6 +10,12 @@ var cart = {
 
         $('#btnPayment').off('click').on('click', function () {
             window.location.href = "/thanh-toan";
+            //var session = '<%= Session["CommonConstants.USER_SESSION"]%>';
+            //if (session == null) {
+            //    window.location.href = "/thanh-toan";
+            //} else {
+            //    console.log("da ton tai user", session);
+            //}
         });
 
         $('#btnUpdate').off('click').on('click', function () {

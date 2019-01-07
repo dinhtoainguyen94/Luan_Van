@@ -1,14 +1,29 @@
 ﻿@model List<Model.EF.Menu>
 
 <div class="call">
-    <p><span>Need help:</span> call us <span class="number">098-991-4908</span></p>
+    <p><span>SĐT : </span><span class="number">098-991-4908</span></p>
 </div>
 <div class="account_desc">
-    <ul>
+    @{
+        var session = (WebBanHangOnline.Common.UserLogin)Session[WebBanHangOnline.Common.CommonConstants.USER_SESSION];
+    }
+    @if (session == null)
+    {
+        <ul>
         @foreach (var item in Model)
         {
             <li><a href="@item.Link" target="@item.Target">@item.Text</a></li>
         }
         
     </ul>
+    }
+    else
+    {
+        <ul>
+            <li style="color:red">Xin Chào : @session.UserName </li>
+            <li>@Html.ActionLink("Đăng Xuất", "Logout", "User")</li>
+        </ul>
+    }
+    
 </div>
+<div class="clear"></div>

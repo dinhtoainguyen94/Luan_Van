@@ -5,7 +5,6 @@
     var category = (Model.EF.DanhMucSP)ViewBag.Category;
     var related = (List<Model.EF.SanPham>)ViewBag.RelatedProduct;
 }
-
 <div class="content">
     <div class="content_top">
         <div class="back-links">
@@ -46,12 +45,15 @@
                         <div class="share">
                             <p>Chia Sẻ :</p>
                             <ul>
-                               
                                 <li><a href="#"><img src="/assets/client/images/facebook.png" alt="" /></a></li>
                                 <li><a href="#"><img src="/assets/client/images/twitter.png" alt="" /></a></li>
                             </ul>
                         </div>
-                        <div class="button"><span><a href="them-gio-hang?productId=@Model.ID_SP&quantity=1">Thêm vào giỏ</a></span></div>
+                        @*<div class="button"><span><a href="them-gio-hang?productId=@Model.ID_SP&quantity=1">Thêm vào giỏ</a></span></div>*@
+                        
+                        <div class="add-cart" style="padding-top:40px">
+                            <h4><a href="@Url.Action("AddItem", "Cart", new { productId = @Model.ID_SP, @Model.Quantity })">Thêm Vào Giỏ</a></h4>
+                        </div>
                         <div class="clear"></div>
                     </div>
                     <div class="wish-list">
@@ -98,11 +100,12 @@
                 @foreach (var item in related)
                 {
                     var url = "/chi-tiet/" + item.MetaTitle + "-" + @item.ID_SP;
+                    var urlgh = "/them-gio-hang/" + @item.ID_SP +"-"+ item.Quantity;
                     <div class="grid_1_of_4 images_1_of_4">
                     <a href="@url"><img src="@item.Image" alt=""></a>
                     <div class="price" style="border:none">
                         <div class="add-cart" style="float:none">
-                            <h4><a href="them-gio-hang?id=@item.ID_SP&quantity=1">Thêm Vào Giỏ</a></h4>
+                            <h4><a href="@urlgh">Thêm Vào Giỏ</a></h4>
                         </div>
                         <div class="clear"></div>
                     </div>
@@ -118,7 +121,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.......</p>
                 <div class="signup">
                     <form>
-                        <input type="text" value="E-mail address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-mail address';"><input type="submit" value="Sign up">
+                        <input type="text" value="E-mail address" onfocus="this.value = '';" onblur="if (this.value == '') { this.value = 'E-mail address' }"><input type="submit" value="Sign up">
                     </form>
                 </div>
             </div>

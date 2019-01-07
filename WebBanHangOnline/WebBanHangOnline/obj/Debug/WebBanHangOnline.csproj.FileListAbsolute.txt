@@ -63,6 +63,9 @@ D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\WebBanHangOnline.dll.co
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\WebBanHangOnline.dll
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\WebBanHangOnline.pdb
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\Antlr3.Runtime.dll
+D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\BotDetect.dll
+D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\BotDetect.Web.Mvc.dll
+D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\Common.dll
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\EntityFramework.dll
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\EntityFramework.SqlServer.dll
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\Microsoft.AspNet.Identity.Core.dll
@@ -83,6 +86,7 @@ D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\Newtonsoft.Json.dll
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\Owin.dll
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\PagedList.dll
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\PagedList.Mvc.dll
+D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\System.Data.SQLite.dll
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\System.Web.Helpers.dll
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\System.Web.Mvc.dll
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\System.Web.Optimization.dll
@@ -91,16 +95,18 @@ D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\System.Web.WebPages.Dep
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\System.Web.WebPages.dll
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\System.Web.WebPages.Razor.dll
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\WebGrease.dll
+D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\Common.pdb
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\Model.pdb
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\PagedList.xml
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\PagedList.Mvc.xml
+D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\System.Data.SQLite.xml
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\System.Web.Helpers.xml
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\System.Web.Mvc.xml
-D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\System.Web.Optimization.xml
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\System.Web.Razor.xml
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\System.Web.WebPages.xml
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\System.Web.WebPages.Deployment.xml
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\System.Web.WebPages.Razor.xml
+D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\System.Web.Optimization.xml
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\Newtonsoft.Json.xml
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\Antlr3.Runtime.pdb
 D:\GitHub\Luan_Van\WebBanHangOnline\WebBanHangOnline\bin\EntityFramework.xml

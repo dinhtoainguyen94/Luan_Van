@@ -43,7 +43,12 @@
             <button id="btnContinue" class="btn">Tiếp tục mua hàng</button>
             <button id="btnUpdate" class="btn">Cập nhật giỏ hàng</button>
             <button id="btnDeleteAll" class="btn">Xóa tất cả</button>
-            <button id="btnPayment" class="btn">Thanh Toán</button>
+            @*<button id="btnPayment" class="btn">Thanh Toán</button>*@
+            using (Html.BeginForm("Index", "Cart", FormMethod.Post))
+            {
+                <button type="submit" class="btn">Thanh Toán</button>
+            }
+            
         }else
         {
             <span class="alert alert-danger">Chưa có sản phẩm nào trong giỏ hàng</span>
